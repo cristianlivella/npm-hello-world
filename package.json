@@ -1,5 +1,5 @@
 {
-    "name": "NPM Hello World",
+    "name": "@cristianlivella/npm-hello-world",
     "version": "0.0.1",
     "description": "",
     "main": "lib/index.js",
