@@ -1,0 +1,33 @@
+{
+    "name": "NPM Hello World",
+    "version": "0.0.1",
+    "description": "",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "lint": "tslint -p tsconfig.json",
+        "prepare" : "npm run build",
+        "prepublishOnly" : "npm run lint",
+        "version" : "npm run format && git add -A src",
+        "postversion" : "git push && git push --tags"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cristianlivella/npm-hello-world.git"
+    },
+    "files": ["lib/**/*"],
+    "keywords": [],
+    "author": "Cristian Livella",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/cristianlivella/npm-hello-world/issues"
+    },
+    "homepage": "https://github.com/cristianlivella/npm-hello-world#readme",
+    "devDependencies": {
+        "prettier": "^2.6.2",
+        "tslint": "^6.1.3",
+        "tslint-config-prettier": "^1.18.0"
+    }
+}
